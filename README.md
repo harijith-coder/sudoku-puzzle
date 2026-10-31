@@ -140,9 +140,7 @@ Contributions are welcome! To contribute:
 
 ---
 
-## ✍️ Authors
-
-- **Manthan** — *Original work* — [Llawliet73](https://github.com/Llawliet73/sudokuuuu.git)
+## ✍️ Author
 - **Harijith** — *Maintainer* — [harijith-coder](https://github.com/harijith-coder)
 
 ---
