@@ -1,74 +1,156 @@
-#  Sudoku Puzzle 🧩
+# 🧩 Sudoku Puzzle
 
-_A classic Sudoku game for Android with a clean, modern interface and theme support._
+> A classic Sudoku game for Android with a clean, modern interface, dark/light theme support, and smooth gameplay experience.
 
+[![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
+[![Java](https://img.shields.io/badge/Language-Java-orange.svg)](https://www.java.com)
+[![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg)](https://android-arsenal.com/api?level=24)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-##  Features
+---
 
-This app was built to provide a polished and enjoyable Sudoku experience. Key features include:
+## 📖 About
 
-*   **Classic Sudoku Gameplay:** A standard 9x9 grid with classic Sudoku rules.
-*   **Multiple Difficulty Levels:** Choose between Easy, Medium, and Hard puzzles to match your skill level.
-*   **Light & Dark Mode:** A fully supported dark theme that can be toggled in the settings for comfortable viewing in any lighting.
-*   **Game Timer:** A "Show Timer" option on the main menu allows you to time your games or play at a relaxed pace.
-*   **Error Tracking:** The game tracks your mistakes, allowing up to 3 errors per game.
-*   **In-Game Actions:**
-    *   **New Game:** Start a fresh puzzle with the current difficulty.
-    *   **Solve:** Instantly see the solution to the current puzzle.
-    *   **Check:** Highlight any incorrect numbers you have entered.
-    *   **Undo:** Revert your last move.
+**Sudoku Puzzle** (SudokuZenith) is a native Android Sudoku app built in Java. It features puzzle generation across multiple difficulty levels, a fully-themed UI with Material Design components, sound effects, confetti celebrations on win, and AdMob integration.
 
-## 🛠️ Tech Stack & Tools
+---
 
-*   **Language:** **Java**
-*   **Platform:** Android (Native)
-*   **UI Toolkit:** XML Layouts with Material Components
-*   **IDE:** Android Studio
-*   **Version Control:** Git & GitHub
+## ✨ Features
 
-## Getting Started
+| Feature | Description |
+|---|---|
+| 🎮 Classic 9×9 Sudoku | Standard Sudoku rules on a clean grid |
+| 🎚️ Difficulty Levels | Easy, Medium, and Hard puzzles |
+| 🌙 Dark / Light Mode | Toggle themes from Settings — persisted across sessions |
+| ⏱️ Game Timer | Optional timer to track solve time |
+| ❌ Error Tracking | Up to 3 mistakes allowed per game |
+| ↩️ Undo | Revert your last move |
+| ✅ Check | Highlights incorrect entries |
+| 💡 Solve | Instantly reveals the full solution |
+| 🎉 Win Animation | Confetti celebration on puzzle completion |
+| 🔊 Sound Effects | Click, error, hint, and win sounds |
+| 📢 AdMob Ads | Banner ads integrated on the main screen |
 
-To get a local copy up and running, follow these simple steps.
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Java |
+| Platform | Android (Native) |
+| UI | XML Layouts + Material Components |
+| Build System | Gradle |
+| IDE | Android Studio |
+| Ads | Google AdMob (play-services-ads) |
+| Animations | Confetti library (jinatonic/confetti) |
+| Min SDK | API 24 (Android 7.0) |
+| Target SDK | API 34 (Android 14) |
+
+---
+
+## 🗂️ Project Structure
+
+```
+sudokuuuu-main/
+├── app/
+│   └── src/main/
+│       ├── java/com/example/sudokuzenith/
+│       │   ├── MainActivity.java          # Home screen, difficulty selector, ads
+│       │   ├── GameActivity.java          # Core game screen
+│       │   ├── GameEndActivity.java       # Win/lose result screen
+│       │   ├── SettingsActivity.java      # Theme toggle settings
+│       │   ├── SudokuGenerator.java       # Puzzle generation logic
+│       │   ├── SoundManager.java          # Audio effects manager
+│       │   ├── SudokuZenithApp.java       # Application class
+│       │   └── view/
+│       │       └── SudokuBoardView.java   # Custom Sudoku grid view
+│       ├── res/
+│       │   ├── layout/                    # XML layouts for all activities
+│       │   ├── drawable/                  # Icons and UI assets
+│       │   ├── values/                    # Colors, strings, themes
+│       │   ├── values-night/              # Dark mode color overrides
+│       │   └── raw/                       # Sound files (click, error, hint, win)
+│       └── AndroidManifest.xml
+├── build.gradle
+├── settings.gradle
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-*   Android Studio (latest stable version recommended)
-*   Git
+- [Android Studio](https://developer.android.com/studio) (latest stable)
+- Git
+- Android device or emulator running API 24+
 
 ### Installation
 
-1.  **Clone the repository**
-    ```sh
-    git clone https://github.com/YourUsername/SudokuZenith.git
-    ```
-2.  **Open in Android Studio**
-    *   In Android Studio, select `File` > `Open`.
-    *   Navigate to the cloned `SudokuZenith` folder and open it.
-3.  **Build the Project**
-    *   Let Android Studio sync the Gradle files.
-    *   Click `Build` > `Rebuild Project`.
-    *   Run the app on an emulator or a physical device.
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/harijith-coder/sudoku-puzzle.git
+   ```
 
+2. **Open in Android Studio**
+   - Go to `File` → `Open`
+   - Select the cloned `sudokuuuu-main` folder
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+3. **Sync & Build**
+   - Let Gradle sync automatically
+   - Click `Build` → `Rebuild Project`
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
-##  Future Improvements
-
-Here are some ideas for future features:
-
-*   [ ] A more advanced puzzle generation algorithm.
-*   [ ] User statistics (win/loss ratio, best times, etc.).
-*   [ ] A "Hint" system.
-*   [ ] More themes and customization options.
-
-## ✍️ Author
-
-*   **Manthan** - *Initial Work* - [Manthan](https://github.com/Llawliet73/sudokuuuu.git) 
+4. **Run**
+   - Select an emulator or connected device
+   - Click ▶ **Run**
 
 ---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create your feature branch
+   ```sh
+   git checkout -b feature/AmazingFeature
+   ```
+3. Commit your changes
+   ```sh
+   git commit -m "Add some AmazingFeature"
+   ```
+4. Push to the branch
+   ```sh
+   git push origin feature/AmazingFeature
+   ```
+5. Open a Pull Request
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] Advanced puzzle generation algorithm (backtracking solver)
+- [ ] User statistics — win/loss ratio, best times
+- [ ] In-game Hint system
+- [ ] More themes and color customization
+- [ ] Pencil/notes mode for candidate tracking
+- [ ] Puzzle save & resume
+
+---
+
+## ✍️ Authors
+
+- **Manthan** — *Original work* — [Llawliet73](https://github.com/Llawliet73/sudokuuuu.git)
+- **Harijith** — *Maintainer* — [harijith-coder](https://github.com/harijith-coder)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">Made with ❤️ for Android</div>
